@@ -6,7 +6,7 @@
     "mongoose": "^6.6.5",
     "moongose": "^1.0.0"
     "scripts":{
-      "start": "node index.js"
+      "start": "node server.js"
   },
   } 
 }
