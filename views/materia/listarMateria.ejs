@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%-include("../partials/cabecalho.ejs")%>
+    <title>Listagem Matérias</title>
+</head>
+<div class ="container">
+    <div>
+    <%if (salvo != undefined){ %>
+        <div class="alert alert-success" role="alert" > Materia cadastrada com sucesso! </div> 
+        <%}%>
+</div>
+
+<div>
+
+    <%if (removido != undefined){ %>
+        <div class="alert alert-danger" role="alert" > Materia removida com sucesso! </div> 
+        <%}%>
+</div>
+
+<div>
+
+    <%if (alterado != undefined){ %>
+        <div class="alert alert-dark" role="alert" > Materia atualizada com sucesso! </div> 
+        <%}%>
+</div>
+
+<body>
+    
+    <h1>Lista Matérias</h1>
+   
+    <% for (let i=0; i<lista.length; i++) {  %>
+ 
+         
+         <div><b>Número: </b><%=lista[i].materia %> </div>
+         
+    </br>
+    <div>
+        <a class="btn btn-outline-secondary" href="/materias/<%= lista[i].numero%>">detalhar</a></href>
+        <a class="btn btn-outline-danger" onclick="return confirm('deseja remover matéria?')" href="/materias/remover/<%= lista[i].numero%>">remover</a></href>
+        <a class="btn btn-outline-dark" href="/materias/cadastrar/<%= lista[i].numero%>">atualizar</a></href>
+    </div>
+    <!-- //<a type="button" class="btn btn-outline-danger" href="/detalharMateria/<%=lista[i].numero%>">Detalhar</a>
+    <hr> -->
+
+   <% } %>  
+
+</body>
+<br>
+<a href="/" type="button" class="btn btn-outline-dark">Voltar</a>  
+
+<footer>
+    <%-include("../partials/footer.ejs")%>
+</footer>
+ 
+</html>

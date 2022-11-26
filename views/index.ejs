@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<br lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    
+</head>
+<body>
+       
+    <div class="container">
+        <%- include("partials/cabecalho.ejs")%>
+        <br>    
+    <h1>Página inicial da aplicação:</h1>
+    <br>
+    <div  class="btn-group ">
+        <a class="btn btn-outline-success" href="/materias">Listagem materias</a>
+        <a class="btn btn-outline-success" href="materias/cadastrar">Cadastro de materias</a>
+       
+    </div>
+<br>
+<br>
+    <div class="btn-group">
+        <a class="btn btn-outline-success" href="/alunos">Listagem alunos</a>
+        <a class="btn btn-outline-success" href="alunos/cadastrarAlunos">Cadastro de alunos</a>
+        
+    </div>
+<br>
+    <!-- <div>
+        <a class="btn btn-outline-success" href="/usuarios/login">Login Usuário</a>
+    </div> -->
+    <br>
+  
+    <%- include("partials/footer.ejs")%> 
+    <br>
+    </div>
+ 
+</body>

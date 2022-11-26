@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%-include("../partials/cabecalho.ejs")%>
+<head>
+    <title>Cadastro</title>
+</head>
+<body>
+    <div class="container">
+        <h1> Cadastrar Aluno:</h1>
+        <% if (erro !=undefined) { %>
+            <div class="alert alert-danger" role="alert">aluno ja cadastrado</div>
+            <% } %>
+        
+        <form action="/alunos" method="post">
+            <input type="hidden" name="id" value="<%= aluno.id%>">
+    
+            <div  class=mb-3>
+                <label class= "form-label">matricula:</label>
+                <input type="text" value= "<%= aluno.matricula %>" required class="form-control" name="matricula">
+            </div>
+            <div class=mb-3>
+                <label class= "form-label">nome:</label>
+                <input type="text" value= "<%= aluno.nome %>" class="form-control" name="nome">
+            </div>
+            <div class=mb-3>
+                <label class= "form-label">serie:</label>
+                <input type="text" value= "<%= aluno.serie %>" class="form-control" name="serie">
+            </div>
+            <div <%= escondido %> class=mb-3>
+                <label class= "form-label">senha:</label>
+                <input type="text" value= "<%= aluno.senha %>" class="form-control" name="senha">
+            </div>
+            <div>
+            <button  type="submit" class="btn btn-outline-success">salvar</button>
+            <a class="btn btn-dark" href="/">voltar</a> </div>
+            </form>
+        </form>
+
+    </div>
+
+    <footer>
+        <%-include("../partials/footer.ejs")%>
+    </footer>
+</div>
+</body>
+ 
+ 
+ 
+</html>

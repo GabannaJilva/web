@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%-include("../partials/cabecalho.ejs")%>
+    <title>Detalhar aluno</title>
+</head>
+<body>
+    <h1>Detalhar:</h1>
+<table class="table table-bordered">
+    <div class=" "container mt-3>
+        <tr>
+            <th>Mátricula:</th>
+            <td>
+                <%= resultado.matricula %> 
+            </td>
+        </tr>
+        <tr>
+            <th>Nome:</th>
+            <td>
+                <%= resultado.nome %> 
+            </td>
+        </tr>
+        <tr>
+            <th>Série:</th>
+            <td>
+                <%= resultado.serie %> 
+            </td>
+        </tr>
+    </div>
+</table>
+      
+<a href="/alunos" type="button" class="btn btn-outline-secondary">Voltar</a>
+
+    <footer>
+        <%-include("../partials/footer.ejs")%>
+    </footer>
+</body>
+</html>

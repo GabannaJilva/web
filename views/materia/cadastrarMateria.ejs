@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%-include("../partials/cabecalho.ejs")%>
+<head>
+    <title>Cadastro</title>
+</head>
+<body>
+    <div class="container">
+    <form action="/materias" method="post">
+        <div>Número: <input type="text" value="<%=materia.numero%>" class="form-control" name="numero" required></div>
+        <div>Matéria: <input type="text" value="<%=materia.materia%>" class="form-control" name="materia" required></div>
+        <div>Professor: <input type="text" value="<%=materia.professor%>"class="form-control" name="professor" required></div>
+    </br>
+        <button type="submit" class="btn btn-outline-success">Salvar</button>
+        <a href="/" type="button" class="btn btn-outline-secondary">Voltar</a>
+    </form>
+ 
+    
+   
+    <footer>
+        <%-include("../partials/footer.ejs")%>
+    </footer>
+</div>
+</body>
+ 
+ 
+ 
+</html>

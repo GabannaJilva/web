@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Listagem de pessoas</title>
+        <%- include("../partials/cabecalho.ejs") %>
+    </head>
+<div class ="container">
+    <div>
+    <%if (salvo != undefined){ %>
+        <div class="alert alert-success" role="alert" > Aluno cadastrado com sucesso! </div> 
+        <%}%>
+</div>
+
+<div>
+
+    <%if (removido != undefined){ %>
+        <div class="alert alert-danger" role="alert" > Aluno removido com sucesso! </div> 
+        <%}%>
+</div>
+
+<div>
+
+    <%if (alterado != undefined){ %>
+        <div class="alert alert-dark" role="alert" > Aluno atualizado com sucesso! </div> 
+        <%}%>
+</div>
+
+
+
+<% for (let i=0; i<lista.length; i++) {  %>
+
+    <!-- <div> <b>Código: </b><%= lista[i].matricula %> </div> -->
+     <div><b>Nome: </b><%=lista[i].nome %> </div>
+     <!-- <div><b>Idade: </b><%= lista[i].serie %> </div> -->
+     <br>
+     <div>
+        <a class="btn btn-outline-secondary" href="/alunos/<%= lista[i].matricula%>">detalhar</a></href>
+        <a class="btn btn-outline-danger" onclick="return confirm('deseja remover aluno?')" href="/alunos/remover/<%= lista[i].matricula%>">remover</a></href>
+        <a class="btn btn-outline-dark" href="/alunos/cadastrarAlunos/<%= lista[i].matricula%>">atualizar</a></href>
+    </div>
+
+     <hr>
+
+<% } %>
+
+<%- include("../partials/footer.ejs")%>
+<br>
+<div>
+   <a class="btn btn-dark" href="/">voltar</a>
+</div>
+</div>
+<footer>
+    <%-include("../partials/footer.ejs")%>
+</footer>
+ 
+</html>

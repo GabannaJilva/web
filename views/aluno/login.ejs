@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel= "stylesheet" href="/css/bootstrap.min.css">
+    <div class="container">
+       
+</head>
+<body>
+  
+    <h1> login:</h1>  
+           
+    <form action="/alunos/login" method="post">
+
+        <div>Matrícula: <input type="matricula" required class="form-control" name="matricula"></div>
+        <div>senha: <input type="password" required class="form-control" name="senha"></div>
+        <br>
+        <div>
+            <button  type="submit" class="btn btn-outline-success">logar</button>
+            <a class="btn btn-outline-dark" href="/alunos/cadastrarAlunos">Cadastro de novo aluno</a>
+        </div>
+    </form>
+    
+</body>
+</html>
